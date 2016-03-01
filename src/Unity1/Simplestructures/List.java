@@ -50,16 +50,38 @@ public class List {
        return counter;
     }
     public void printFirstElement(){
-        Node aux =head;
-        int a=0;
-        if(aux != null ){
-            aux= aux;
+        if(head==null){
+            System.out.println("-1");
         }else{
-            
+            System.out.println(head.data);
         }
+     
     }
     public void PrintLastElement(){
+        Node aux = head;
+        if(aux!=null){
+            while(aux.Next != null){
+                aux = aux.Next;
+            }
+            System.out.println(aux.data);
+        }else{
+            System.out.println("-1");
+        }
         
+    }
+    
+    public void duplicate(){
+     if (head==null)return;
+     Node last = head, aux = head;
+     while(last.Next != null){
+         last = last.Next;
+     }
+     int c = count();
+     for(int i= 0; i < c; i++){
+            last.Next = new Node(aux.data);
+            aux= aux.Next;
+            last= last.Next;
+        }
     }
     
     
