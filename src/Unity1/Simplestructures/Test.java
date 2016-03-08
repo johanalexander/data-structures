@@ -20,12 +20,17 @@ public class Test {
         int c = l.count();
         System.out.println("Total Node "+c);
         
-        System.out.println("duplica");
-        l.duplicate();
+//        System.out.println("duplica");
+//        l.duplicate();
         
         System.out.println("valores duolicado ");
         l.print();
         
+        System.out.println("eliminar el del medio");
+        l.removeMiddle();
+        
+        System.out.println("numeros impares");
+        l.countOdds();
         
         
     

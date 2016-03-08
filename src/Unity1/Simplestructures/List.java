@@ -83,6 +83,70 @@ public class List {
             last= last.Next;
         }
     }
+    public void reversPrint(){
+        Node aux=head;
+        Node last;
+        
+        if(aux != null){
+            aux = aux.Next;
+            last = aux;            
+        }
+        while(aux!=null){
+            int c=count();
+            
+        }
+        
+    }
+    public void invert(){
+        if(head==null)return;
+        Node aux= head, head2=null;
+        while(head!=null){
+            aux= head;
+            head= head.Next;
+            aux.Next=head.Next;
+            head2=aux;
+        }
+        head=head2;
+    }
+            
+    public void insertZeros(){
+            Node aux =head;
+            if(head == null)return;
+            while(aux != null){
+                
+            }
+        }
+    public void removeMiddle(){
+        Node aux=head, last=head;
+        while(last.Next != null){
+            last = last.Next;
+        }
+        int c= count();
+        int a;
+        a= c/2;
+        for(int i=0;i<a;i++){
+            if(aux!=null){
+                aux=aux.Next;
+                System.out.println(aux.data);
+            }            
+        }
+    }
+    public int countOdds(){
+        Node aux= head;
+        int counter=0;
+        while(aux != null){
+            aux=aux.Next;
+        }
+        System.out.println(aux.data);
+        String a= String.valueOf(aux.data);
+        int c= Integer.parseInt(a),b;
+        b=c%2;
+        while(b!=0){
+            counter++;
+        }
+        return counter;
+        
+    }
     
     
 }
