@@ -69,6 +69,31 @@ public class List {
         }
         
     }
+    public void RemoveFirstElement() {
+
+        if (head == null) {
+            return;
+        }
+        head = head.Next;
+    }
+
+    public void RemoveLastElement() {
+
+        if (head == null) {
+            return; 
+        }
+        Node aux = head, p = null;
+        p = aux;
+        while (aux.Next != null) {
+            aux = aux.Next;
+        }
+        p.Next = aux.Next;
+        
+            
+    if( head.Next != null){
+    head = null;
+    }
+}
     
     public void duplicate(){
      if (head==null)return;
