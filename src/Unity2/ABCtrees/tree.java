@@ -86,5 +86,21 @@ private  Node root;
        return false;
        
    }
-    
+   public void recursiveprint(){
+       recursiveprint(root);
+       System.out.println("");
+   }
+   private void recursiveprint(Node r){
+       if(r == null)return;
+       recursiveprint(r.left);
+       System.out.print(""+ r.data);
+       recursiveprint(r.right);
+   }
+    public int recursivecount(){
+        return recursivecount(root);
+    }
+    private int recursivecount(Node r){
+        if(r == null)return 0;
+        return recursivecount(r.left) + recursivecount(r.right)+1;
+    }
 }
